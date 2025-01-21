@@ -66,6 +66,7 @@ class CosyVoiceServiceImpl(cosyvoice_pb2_grpc.CosyVoiceServicer):
 
         # 发送合成结果
         logging.info('send inference response')
+        print(model_output)
         for i in model_output:
             response = cosyvoice_pb2.Response()
             # 将浮点数音频转换为16位整数格式
